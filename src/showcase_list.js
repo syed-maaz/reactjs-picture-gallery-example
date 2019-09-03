@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import ShowcaseCard from './showcase_card'
 
 class ShowcaseList extends Component {
@@ -13,8 +13,10 @@ class ShowcaseList extends Component {
 
     componentDidMount() {
         // Fetch item after component mounted
-        fetch("https://s3.eu-central-1.amazonaws.com/ecosia-frontend-developer/trees.json")
-            .then(res => { return res.json()})
+        fetch('https://s3.eu-central-1.amazonaws.com/ecosia-frontend-developer/trees.json')
+            .then(res => {
+                return res.json()
+            })
             .then(
                 (result) => {
                     this.setState({
@@ -31,7 +33,7 @@ class ShowcaseList extends Component {
     }
 
     render() {
-        const {items} = this.state;
+        const { items } = this.state;
         return (
             <div className="container">
                 <div className="row">
@@ -39,9 +41,9 @@ class ShowcaseList extends Component {
                         <h1 className="gallery-title">Gallery</h1>
                     </div>
 
-                    {items.map(item => (
-                        <ShowcaseCard name={item.name} species={item.species_name} image={item.image}/>
-                    ))}
+                    { items.map(item => (
+                        <ShowcaseCard name={ item.name } species={ item.species_name } image={ item.image }/>
+                    )) }
 
                 </div>
             </div>
