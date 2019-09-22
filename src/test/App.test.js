@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from '../App';
 import { act } from "react-dom/test-utils";
-import ShowcaseList from '../showcase_list';
-import ShowcaseCard from '../showcase_card';
+import ShowcaseList from '../components/showcase_list';
+import ShowcaseCard from '../components/showcase_card';
 
 
 let container = null;

@@ -25,7 +25,7 @@ class ShowcaseCard extends Component {
                     </button>
 
                     { this.state.isShow ?
-                        <img className="gallary-image" src={ this.props.image }/>
+                        <img className="gallary-image" alt={ this.props.name } src={ this.props.image }/>
                         : '' }
                 </div>
             </div>
